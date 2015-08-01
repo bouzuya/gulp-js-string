@@ -1,0 +1,34 @@
+{
+  "name": "gulp-js-string",
+  "description": "A gulp plugin for exporting contents as string",
+  "version": "0.0.0",
+  "author": {
+    "name": "bouzuya",
+    "email": "m@bouzuya.net",
+    "url": "http://bouzuya.net"
+  },
+  "bugs": {
+    "url": "https://github.com/bouzuya/gulp-js-string/issues"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "js-string-escape": "^1.0.0",
+    "through2": "^2.0.0"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/bouzuya/gulp-js-string#readme",
+  "keywords": [
+    "gulpplugin"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouzuya/gulp-js-string.git"
+  }
+}
