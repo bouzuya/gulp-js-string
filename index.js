@@ -19,9 +19,6 @@ module.exports = function() {
     try {
       // convert to vinyl 0.5.x
       var f = new gutil.File(file);
-      if (f.extname !== '.bhtml') {
-        return callback(null, file);
-      }
       var string = "'" + jsStringEscape(f.contents.toString(encoding)) + "'";
       var script = "module.exports = " + string + ";";
       f.contents = new Buffer(script);
