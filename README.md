@@ -70,3 +70,7 @@ This is espacially useful if used in combination with `gulp-concat` to merge sev
 [user]: https://github.com/bouzuya
 [email]: mailto:m@bouzuya.net
 [url]: http://bouzuya.net
+
+## Contributors
+
+- [dpoetzsch](https://github.com/dpoetzsch)
