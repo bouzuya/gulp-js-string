@@ -32,14 +32,15 @@ module.exports = '<p>meow...meow...</p>';
 
 ## Configuration
 
-Optionally, the variable name can be configured:
+Optionally, the format can be configured:
 
 ```javascript
 var jsString = require('gulp-js-string');
 
 gulp.src('./views/*.bhtml')
-    .pipe(jsString(function(file) {
-        return "exports." + file.basename.split('.')[0];
+    .pipe(jsString(function(escapedString, file) {
+        var varname = file.basename.split('.')[0];
+        return 'exports.' + varname + ' = \'' + escapedString + '\';';
     }))
     .pipe(gulp.dest('./dist'));
 ```
