@@ -2,7 +2,7 @@ var gutil = require('gulp-util');
 var jsStringEscape = require('js-string-escape');
 var through = require('through2');
 
-module.exports = function() {
+module.exports = function(getVarname) {
   var newError = function(e) {
     return new gutil.PluginError('gulp-js-string', e);
   };
@@ -20,7 +20,8 @@ module.exports = function() {
       // convert to vinyl 0.5.x
       var f = new gutil.File(file);
       var string = "'" + jsStringEscape(f.contents.toString(encoding)) + "'";
-      var script = "module.exports = " + string + ";";
+      var varname = getVarname ? getVarname(f) : "module.exports";
+      var script = varname + " = " + string + ";";
       f.contents = new Buffer(script);
       f.extname = '.js';
       return callback(null, f);
